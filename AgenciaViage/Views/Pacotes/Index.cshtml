@@ -1,0 +1,80 @@
+﻿@model IEnumerable<AgenciaViage.Models.Pacotes>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Agência Viage</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/js/site.js" />
+</head>
+<body class="corpo-destino">
+    <section id="hero">
+        <h1>Pacotes</h1>
+    </section>
+    <br />
+    <br />
+    <h4 class="text-center"><a asp-action="Create">Criar Pacotes</a></h4>
+    <br />
+    <div class="table-responsive container-fluid">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Origem)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Destino)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Preço)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.DataIda)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.DataVolta)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td scope="row">
+                            @Html.DisplayFor(modelItem => item.Origem)
+                        </td>
+                        <td scope="row">
+                            @Html.DisplayFor(modelItem => item.Destino)
+                        </td>
+                        <td scope="row">
+                            @Html.DisplayFor(modelItem => item.Preço)
+                        </td>
+                        <td scope="row">
+                            @Html.DisplayFor(modelItem => item.DataIda)
+                        </td>
+                        <td scope="row">
+                            @Html.DisplayFor(modelItem => item.DataVolta)
+                        </td>
+                        <td scope="row">
+                            <a asp-action="Edit" asp-route-id="@item.IdPacotes">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.IdPacotes">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.IdPacotes">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <br />
+    <br />
+</body>
+</html>

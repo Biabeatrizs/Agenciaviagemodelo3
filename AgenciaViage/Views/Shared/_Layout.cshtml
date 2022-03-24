@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Agência Viage</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/js/site.js" />
+</head>
+<body>
+    <section>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="~/img/logo.png" width="80" height="80" alt="">
+            </a>
+            <ul id="navbar">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Destinos">Destinos</a></li>
+                <li><a asp-area="" asp-controller="Promoção" asp-action="Promoções">Promoções</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Contatos">Contatos</a></li>
+                <li><a asp-area="" asp-controller="Pacotes" asp-action="Index">Pacotes</a></li>
+            </ul>
+            <div id="mobile">
+                <i id="bar" class="fas fa-outdent"></i>
+            </div>
+        </nav>
+    </section>
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="col-4-footer">
+                    <h4>® Agência Viage</h4>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

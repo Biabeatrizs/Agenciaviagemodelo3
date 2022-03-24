@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Agência Viage</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/js/site.js" />
+</head>
+<body>
+    <section id="hero">
+        <h1>Agência Viage</h1>
+        <p>Nunca foi tão fácil fazer aquela <strong>Viagem.</strong></p>
+        <a class="bt bt-yellow" asp-controller="Home" asp-action="Destinos">Confira já</a>
+    </section>
+    <section id="product1" class="section-p1">
+        <h2>Sugestões de Viagens</h2>
+        <p>Destinos incrivéis</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="~/img/Porto Seguro.jpg" alt="">
+                <div class="des">
+                   <h5>Porto Seguro</h5>
+                    <h4>R$970,00</h4>
+                    <p>Em até 10x sem juros no cartão de crédito</p>
+
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="~/img/Porto de Galinhas.jpg" alt="">
+                <div class="des">
+                    
+                    <h5>Porto de Galinhas</h5>
+                    <h4>R$1.600,00</h4>
+                    <p>Em até 10x sem juros no cartão de crédito</p>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="~/img/Fernando de Noronha.jpg" alt="">
+                <div class="des">
+                   
+                    <h5>Fernando de Noronha</h5>
+                    <h4>R$1.300,00</h4>
+                    <p>Em até 10x sem juros no cartão de crédito</p>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
